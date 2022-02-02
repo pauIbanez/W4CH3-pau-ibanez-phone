@@ -6,7 +6,7 @@ import Keyboard from "./components/Keyboard/Keyboard";
 function App() {
   return (
     <div className="container">
-      <Info display={true} deactivatedClass={"off"} />
+      <Info deactivatedClass={"off"} />
       <main className="phone">
         <Keyboard />
         <Actions />
