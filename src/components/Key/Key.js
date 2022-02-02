@@ -9,3 +9,5 @@ const Key = ({ big, text }) => {
     </li>
   );
 };
+
+export default Key;
