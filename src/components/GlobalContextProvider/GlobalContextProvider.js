@@ -19,9 +19,11 @@ const GlobalContextProvider = ({ children }) => {
   };
 
   const onKeyClick = (value) => {
-    if (value === "delete" && number.toString().length > 0) {
-      setNumber(Math.floor(number / 10));
-    } else {
+    if (value === "delete") {
+      if (number !== "") {
+        setNumber(Math.floor(number / 10));
+      }
+    } else if (number.toString().length < 9) {
       setNumber(Number.parseInt(number.toString() + value), 10);
     }
   };
@@ -31,6 +33,9 @@ const GlobalContextProvider = ({ children }) => {
       setCallAvailable(true);
     } else {
       setCallAvailable(false);
+    }
+    if (number === 0) {
+      setNumber("");
     }
   }, [calling, number]);
 
