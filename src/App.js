@@ -1,10 +1,11 @@
 import "./App.css";
 import Display from "./components/Display/Display";
+import Info from "./components/Info/Info";
 
 function App() {
   return (
     <div className="container">
-      <span className="message">Calling...</span>
+      <Info display={true} deactivatedClass={"off"} />
       <main className="phone">
         <div className="keyboard-container">
           <ol className="keyboard">
