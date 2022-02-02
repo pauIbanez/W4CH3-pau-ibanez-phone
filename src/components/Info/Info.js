@@ -1,6 +1,11 @@
-const Info = ({ display, deactivatedClass }) => {
+import { useContext } from "react";
+import globalContext from "../../contexts/globalContext";
+
+const Info = ({ deactivatedClass }) => {
+  const { calling } = useContext(globalContext);
+
   return (
-    <span className={`message${display ? "" : ` ${deactivatedClass}`}`}>
+    <span className={`message${calling ? "" : ` ${deactivatedClass}`}`}>
       Calling...
     </span>
   );
