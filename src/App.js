@@ -1,4 +1,5 @@
 import "./App.css";
+import Display from "./components/Display/Display";
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
           </ol>
         </div>
         <div className="actions">
-          <span className="number">667359961</span>
+          <Display number={234265} />
           {/* <!-- El botón de llamar debe tener la clase "activo" cuando --> */}
           {/* <!-- el número de teléfono tiene 9 cifras --> */}
           <a href="asd" className="call">
