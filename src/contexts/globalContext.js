@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 
 const globalContext = React.createContext({});
 globalContext.displayName = "Global Context";
