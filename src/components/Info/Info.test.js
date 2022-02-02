@@ -5,9 +5,8 @@ describe("Given Info component", () => {
   describe("When it recieves display as true", () => {
     test("Then it should render a component with the text 'Calling...'", () => {
       const text = "Calling...";
-      const display = true;
 
-      render(<Info display={display} />);
+      render(<Info />);
 
       const infoElement = screen.queryByText(text);
 
@@ -19,10 +18,9 @@ describe("Given Info component", () => {
     test("Then it should render a component with className'message off'", () => {
       const deactivatedClass = "off";
       const text = "Calling...";
-      const display = false;
       const expectedClassName = "message off";
 
-      render(<Info display={display} deactivatedClass={deactivatedClass} />);
+      render(<Info deactivatedClass={deactivatedClass} />);
 
       const infoElement = screen.queryByText(text);
 
