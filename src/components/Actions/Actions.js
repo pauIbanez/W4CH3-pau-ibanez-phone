@@ -1,18 +1,23 @@
+import { useContext } from "react";
+import globalContext from "../../contexts/globalContext";
+import Action from "../Action/Action";
 import Display from "../Display/Display";
 
-const Actions = ({ calling, callAvailable }) => {
+const Actions = () => {
+  const { hangAction } = useContext(globalContext);
+  const { callAction } = useContext(globalContext);
+  const { calling } = useContext(globalContext);
+
+  const action = calling ? (
+    <Action text={"Hang"} className={"hang"} actionOnClick={hangAction} />
+  ) : (
+    <Action text={"Call"} className={"call"} actionOnClick={callAction} />
+  );
+
   return (
     <div className="actions">
       <Display />
-      {calling ? (
-        <a href="asd" className="hang active">
-          Hang
-        </a>
-      ) : (
-        <a href="asd" className={`call${callAvailable ? "active" : ""}`}>
-          Call
-        </a>
-      )}
+      {action}
     </div>
   );
 };
