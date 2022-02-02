@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import globalContext from "../../contexts/globalContext";
 import Display from "../Display/Display";
 
 const Actions = () => {
+  const { calling } = useContext(globalContext);
   return (
     <div className="actions">
       <Display number={234265} />
