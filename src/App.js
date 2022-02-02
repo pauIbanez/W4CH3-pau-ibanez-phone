@@ -2,55 +2,55 @@ import "./App.css";
 
 function App() {
   return (
-    <div class="container">
-      <span class="message">Calling...</span>
-      <main class="phone">
-        <div class="keyboard-container">
-          <ol class="keyboard">
+    <div className="container">
+      <span className="message">Calling...</span>
+      <main className="phone">
+        <div className="keyboard-container">
+          <ol className="keyboard">
             <li>
-              <button class="key">1</button>
+              <button className="key">1</button>
             </li>
             <li>
-              <button class="key">2</button>
+              <button className="key">2</button>
             </li>
             <li>
-              <button class="key">3</button>
+              <button className="key">3</button>
             </li>
             <li>
-              <button class="key">4</button>
+              <button className="key">4</button>
             </li>
             <li>
-              <button class="key">5</button>
+              <button className="key">5</button>
             </li>
             <li>
-              <button class="key">6</button>
+              <button className="key">6</button>
             </li>
             <li>
-              <button class="key">7</button>
+              <button className="key">7</button>
             </li>
             <li>
-              <button class="key">8</button>
+              <button className="key">8</button>
             </li>
             <li>
-              <button class="key">9</button>
+              <button className="key">9</button>
             </li>
             <li>
-              <button class="key">0</button>
+              <button className="key">0</button>
             </li>
             <li>
-              <button class="key big">delete</button>
+              <button className="key big">delete</button>
             </li>
           </ol>
         </div>
-        <div class="actions">
-          <span class="number">667359961</span>
+        <div className="actions">
+          <span className="number">667359961</span>
           {/* <!-- El botón de llamar debe tener la clase "activo" cuando --> */}
           {/* <!-- el número de teléfono tiene 9 cifras --> */}
-          <a href="asd" class="call">
+          <a href="asd" className="call">
             Call
           </a>
           {/* <!-- Sólo se tiene que ver un botón u otro --> */}
-          <a href="asd" class="hang active">
+          <a href="asd" className="hang active">
             Hang
           </a>
         </div>
