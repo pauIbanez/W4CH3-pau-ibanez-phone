@@ -3,9 +3,9 @@ import globalContext from "../../contexts/globalContext";
 
 const GlobalContextProvider = ({ children }) => {
   const contextValue = {};
-  const [calling, setCalling] = useState(false);
+  const [number, setNumber] = useState();
 
-  contextValue.calling = { calling, setCalling };
+  contextValue.number = { number, setNumber };
 
   return (
     <globalContext.Provider value={contextValue}>

@@ -3,10 +3,10 @@ import globalContext from "../../contexts/globalContext";
 import Display from "../Display/Display";
 
 const Actions = () => {
-  const { calling } = useContext(globalContext);
+  const { number } = useContext(globalContext);
   return (
     <div className="actions">
-      <Display number={234265} />
+      <Display number={number.number} />
       {/* <!-- El botón de llamar debe tener la clase "activo" cuando --> */}
       {/* <!-- el número de teléfono tiene 9 cifras --> */}
       <a href="asd" className="call">
