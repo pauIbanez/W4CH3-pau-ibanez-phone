@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import globalContext from "../../contexts/globalContext";
 
 const GlobalContextProvider = ({ children }) => {
@@ -18,19 +18,33 @@ const GlobalContextProvider = ({ children }) => {
     }
   };
 
+  const onKeyClick = (value) => {
+    if (value === "delete") {
+      if (number !== "") {
+        setNumber(Math.floor(number / 10));
+      }
+    } else if (number.toString().length < 9) {
+      setNumber(Number.parseInt(number.toString() + value), 10);
+    }
+  };
+
   useEffect(() => {
     if (number.toString().length === 9) {
       setCallAvailable(true);
     } else {
       setCallAvailable(false);
     }
+    if (number === 0) {
+      setNumber("");
+    }
   }, [calling, number]);
 
   contextValue.callAvailable = callAvailable;
-  contextValue.number = { number, setNumber };
+  contextValue.number = number;
   contextValue.calling = calling;
   contextValue.callAction = callAction;
   contextValue.hangAction = hangAction;
+  contextValue.onKeyClick = onKeyClick;
 
   return (
     <globalContext.Provider value={contextValue}>
