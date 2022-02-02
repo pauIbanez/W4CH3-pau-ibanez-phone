@@ -4,17 +4,24 @@ import globalContext from "../../contexts/globalContext";
 const GlobalContextProvider = ({ children }) => {
   const contextValue = {};
 
-  const [number, setNumber] = useState(123456789);
+  const [number, setNumber] = useState("");
   const [callAvailable, setCallAvailable] = useState(false);
   const [calling, setCalling] = useState(false);
+  const [callingTimeoutId, setCallingTimeoutId] = useState();
 
   const hangAction = () => {
     setCalling(false);
+    clearTimeout(callingTimeoutId);
   };
 
   const callAction = () => {
     if (callAvailable) {
       setCalling(true);
+      setCallingTimeoutId(
+        setTimeout(() => {
+          setCalling(false);
+        }, 5000)
+      );
     }
   };
 
