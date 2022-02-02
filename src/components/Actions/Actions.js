@@ -5,9 +5,7 @@ const Actions = ({ calling, callAvailable }) => {
     <div className="actions">
       <Display />
       {calling ? (
-        <a href="asd" className="hang active">
-          Hang
-        </a>
+        
       ) : (
         <a href="asd" className={`call${callAvailable ? "active" : ""}`}>
           Call
