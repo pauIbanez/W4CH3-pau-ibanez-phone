@@ -1,6 +1,6 @@
 import Display from "../Display/Display";
 
-const Actions = ({ calling }) => {
+const Actions = ({ calling, callAvailable }) => {
   return (
     <div className="actions">
       <Display />
@@ -9,7 +9,7 @@ const Actions = ({ calling }) => {
           Hang
         </a>
       ) : (
-        <a href="asd" className="call">
+        <a href="asd" className={`call${callAvailable ? "active" : ""}`}>
           Call
         </a>
       )}
