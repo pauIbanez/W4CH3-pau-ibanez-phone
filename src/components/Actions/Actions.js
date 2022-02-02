@@ -1,6 +1,6 @@
 import Display from "../Display/Display";
 
-const Actions = ({ calling }) => {
+const Actions = () => {
   return (
     <div className="actions">
       <Display number={234265} />
