@@ -4,7 +4,6 @@ import Display from "./components/Display/Display";
 function App() {
   return (
     <div className="container">
-      <span className="message">Calling...</span>
       <main className="phone">
         <div className="keyboard-container">
           <ol className="keyboard">
