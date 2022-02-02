@@ -3,9 +3,10 @@ import globalContext from "../../contexts/globalContext";
 import Action from "../Action/Action";
 import Display from "../Display/Display";
 
-const Actions = ({ calling }) => {
+const Actions = () => {
   const { hangAction } = useContext(globalContext);
   const { callAction } = useContext(globalContext);
+  const { calling } = useContext(globalContext);
 
   const action = calling ? (
     <Action text={"Hang"} className={"hang"} actionOnClick={hangAction} />
