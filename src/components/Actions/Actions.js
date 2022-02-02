@@ -1,12 +1,9 @@
-import { useContext } from "react";
-import globalContext from "../../contexts/globalContext";
 import Display from "../Display/Display";
 
 const Actions = () => {
-  const { number } = useContext(globalContext);
   return (
     <div className="actions">
-      <Display number={number.number} />
+      <Display />
       {/* <!-- El botón de llamar debe tener la clase "activo" cuando --> */}
       {/* <!-- el número de teléfono tiene 9 cifras --> */}
       <a href="asd" className="call">
