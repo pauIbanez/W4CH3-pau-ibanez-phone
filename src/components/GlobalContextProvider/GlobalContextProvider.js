@@ -40,7 +40,7 @@ const GlobalContextProvider = ({ children }) => {
   }, [calling, number]);
 
   contextValue.callAvailable = callAvailable;
-  contextValue.number = { number, setNumber };
+  contextValue.number = number;
   contextValue.calling = calling;
   contextValue.callAction = callAction;
   contextValue.hangAction = hangAction;

@@ -3,7 +3,7 @@ import globalContext from "../../contexts/globalContext";
 
 const Display = () => {
   const { number } = useContext(globalContext);
-  return <span className="number">{number.number}</span>;
+  return <span className="number">{number}</span>;
 };
 
 export default Display;
