@@ -1,4 +1,5 @@
 import "./App.css";
+import Actions from "./components/Actions/Actions";
 import Info from "./components/Info/Info";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             </li>
           </ol>
         </div>
+        <Actions />
       </main>
     </div>
   );
