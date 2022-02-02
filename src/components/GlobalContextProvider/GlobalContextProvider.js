@@ -18,6 +18,14 @@ const GlobalContextProvider = ({ children }) => {
     }
   };
 
+  const onKeyClick = (value) => {
+    if (value === "delete" && number.toString().length > 0) {
+      setNumber(Math.floor(number / 10));
+    } else {
+      setNumber(Number.parseInt(number.toString() + value), 10);
+    }
+  };
+
   useEffect(() => {
     if (number.toString().length === 9) {
       setCallAvailable(true);
@@ -31,6 +39,7 @@ const GlobalContextProvider = ({ children }) => {
   contextValue.calling = calling;
   contextValue.callAction = callAction;
   contextValue.hangAction = hangAction;
+  contextValue.onKeyClick = onKeyClick;
 
   return (
     <globalContext.Provider value={contextValue}>

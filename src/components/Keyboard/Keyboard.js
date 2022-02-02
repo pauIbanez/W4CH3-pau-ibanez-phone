@@ -1,4 +1,3 @@
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
 import Key from "../Key/Key";
 
 const Keyboard = () => {
