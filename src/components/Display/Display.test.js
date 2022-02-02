@@ -4,9 +4,7 @@ import Display from "./Display";
 describe("Given Display component", () => {
   describe("When it recieves the number '123456789'", () => {
     test("Then it should render a component with the text '123456789'", () => {
-      const number = 123456789;
-
-      render(<Display number={number} />);
+      render(<Display />);
 
       const numberElement = screen.queryByText(number);
 
